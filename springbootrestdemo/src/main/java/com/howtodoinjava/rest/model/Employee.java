@@ -1,7 +1,23 @@
 package com.howtodoinjava.rest.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+@Entity
 public class Employee {
 
+	    @Id
+	    @GeneratedValue
+	    @Column(name = "id")
+	    private Integer id;
+	    @Column(name = "firstName")
+	    private String firstName;
+	    @Column(name = "lastName")
+	    private String lastName;
+	    @Column(name = "email")
+	    private String email;
+	
     public Employee() {
 
     }
@@ -13,11 +29,7 @@ public class Employee {
         this.lastName = lastName;
         this.email = email;
     }
- 
-    private Integer id;
-    private String firstName;
-    private String lastName;
-    private String email;
+   
 
     public Integer getId() {
         return id;
